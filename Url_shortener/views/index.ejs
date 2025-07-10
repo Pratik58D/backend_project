@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Url Shortner</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: radial-gradient(circle, #59bfdf, #17b5dd, #1767b3);
+        color: #0c0c0c;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        background: linear-gradient(135deg, #eeeef3, #d9e3fd);
+        padding: 50px;
+        border-radius: 16px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8),
+          0 0 25px rgba(255, 105, 180, 0.8);
+        width: 450px;
+        text-align: center;
+        animation: fadeIn 1.2s ease-in-out, glowPulse 4s infinite;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-50px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes glowPulse {
+        0%,
+        100% {
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8),
+            0 0 25px rgba(80, 121, 209, 0.8);
+        }
+
+        50% {
+          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9),
+            0 0 40px rgb(89, 147, 224);
+        }
+      }
+      h1 {
+        font-size: 32px;
+        margin-bottom: 25px;
+        background: linear-gradient(90deg, #131014, #1767b3);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: slideIn 1.2s ease-in-out;
+      }
+
+  @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+ label {
+        font-size: 18px;
+        font-weight: 500;
+        color: #0a0a0a;
+        margin-bottom: 12px;
+        display: block;
+        animation: fadeIn 1.2s ease-in-out;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #4d77ec, #8f94fb);
+        color: #0c0c0c;
+        font-size: 16px;
+        transition: box-shadow 0.4s ease, transform 0.3s ease;
+        animation: slideIn 1.2s ease-in-out;
+    }
+     input[type="text"]:focus {
+        outline: none;
+        box-shadow: 0 0 15px rgba(143, 148, 251, 0.8);
+        transform: scale(1.05);
+    }
+
+    button {
+        padding: 15px 30px;
+        background: linear-gradient(135deg, #5ba3dd, #508ddb);
+        color: #070707;
+        font-size: 18px;
+        font-weight: 600;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.4s ease;
+        animation: fadeIn 1.2s ease-in-out;
+    }
+    button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgb(74, 62, 177);
+    }
+
+    p {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #0c0b0b;
+        animation: fadeIn 1.2s ease-in-out;
+    }
+
+    a {
+        color: #1a1817;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: #411e1a;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>URL Shortner</h1>
+      <form action="/shortner" method="post">
+        <label for="longURL"> Enter long URL : </label>
+        <input type="text" id="longUrl" name="longUrl" required />
+        <button type="submit">Shortner</button>
+      </form>
+      <% if(shortUrl) { %>
+      <p>
+        Short URL :- <a href="<%= shortUrl %>" target="_blank" />
+        <%= shortUrl %>
+      </p>
+      <% } %>
+    </div>
+  </body>
+</html>
