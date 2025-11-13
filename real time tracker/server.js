@@ -17,8 +17,6 @@ app.use(express.static(path.join(__dirname,"public")));
 
 io.on("connection",(socket)=>{
     console.log("connected")
-
-
     socket.on("send-location" , (data)=>{
         io.emit("recieve-location",{id:socket.id , ...data})
     });
@@ -27,16 +25,11 @@ io.on("connection",(socket)=>{
         io.emit("user-disconnected", socket.id)
 
     })
-
-
-
 })
-
 
 app.get("/", (req,res)=>{
     res.render("index")
 })
-
 
 server.listen(5000 , "0.0.0.0", ()=>{
     console.log("server is running...")
