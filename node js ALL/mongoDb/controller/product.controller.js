@@ -98,8 +98,7 @@ const getProductStats = async (req, res) => {
 
 const getProductAnalysis = async (req, res) => {
     try {
-
-        const result = await Product.aggregate([
+     const result = await Product.aggregate([
             {
                 $match: {
                     category: "Electronics"
