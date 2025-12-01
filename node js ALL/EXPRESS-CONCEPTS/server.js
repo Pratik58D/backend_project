@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import configureCors from './src/config/corsConfig';
 import {addTimeStamp, requestLogger} from './src/middleware/customMiddleware.js';
 import { globalErrorhandler } from './src/middleware/errorHandler.js';
+import { urlVersioning } from './src/middleware/apiversioning.js';
 
 dotenv.config();
 
@@ -16,9 +17,11 @@ const PORT  =  process.env.PORT || 3000;
 app.use(requestLogger)
 app.use(addTimeStamp)
 
+
 app.use(express.json());
 app.use(configureCors());
 
+app.use('/api/v1',urlVersioning("v1"));
 
 app.use(globalErrorhandler);
 
