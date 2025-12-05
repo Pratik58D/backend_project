@@ -12,14 +12,33 @@ client.on("error",(error)=> console.log("redis client error",error));
 
 async function redisDataStruncture(){
     try {
+
+         await client.connect();
+        console.log("conected to redis");
+        
+
+
         // string -> SET , GET , MSET , MGET
 
         await client.set("user:name" , "virat kohli")
         const name = await client.get("user:name")
+        console.log({name})
+
+        // multiple value set
+
+        await client.MSET(["user:email" , "virat@gmail.com" , "user:age" , "70" , "user:country", "Nepal"])
+
+        const [email , age , country] = await client.MGET(["user:email" ,"user:age","user:country"])
+        console.log({email}, {age} , {country})
+
+
         
     } catch (error) {
-        console.error(error)
+        console.error("redis datastructure error",error)
     }finally{
-        client.quit();
+       await client.quit();
     }
 }
+
+
+redisDataStruncture();
