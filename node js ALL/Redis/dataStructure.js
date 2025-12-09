@@ -53,6 +53,27 @@ async function redisDataStruncture(){
 
        
        //3.........sets => SADD, SMEMBERS,SISMEMBER , SREM.......
+      //   sets are -- object in JavaScript has collection of unique values.
+      //Unordered: The order in which elements are returned is not guaranteed and is often based on internal hash table implementation, not the order you inserted them.
+      
+    //   const numbers = [1,2,3,4,5,1,2,3,4];
+    //   const newSet = new Set(numbers);
+    //   console.log({newSet})      // { newSet: Set(5) { 1, 2, 3, 4, 5 } }
+
+
+       await client.sAdd("user:nickName",["pratik", "hari","krishna","hari"]);       
+       const extractUsersName = await client.sMembers("user:nickName")
+       console.log({extractUsersName})   //[ 'hari', 'krishna', 'pratik' ]
+
+       const isHariuserName= await client.sIsMember("user:nickName","hari") ;
+       console.log({isHariuserName})
+
+      await client.sRem("user:nickName","Hari")
+      
+       const getUpdatedUser = await client.sMembers("user:nickName")
+       console.log({getUpdatedUser})
+
+       
 
         
     } catch (error) {
