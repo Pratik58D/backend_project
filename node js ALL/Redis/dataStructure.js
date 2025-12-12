@@ -106,17 +106,6 @@ async function redisDataStruncture() {
         
         const updatedProductdetail = await client.hGetAll("product")
         console.log({updatedProductdetail});
-
-
-
-
-
-
-
-
-
-
-
     } catch (error) {
         console.error("redis datastructure error", error)
     } finally {
