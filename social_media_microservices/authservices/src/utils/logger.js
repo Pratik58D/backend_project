@@ -15,7 +15,7 @@ const logger = winston.createLogger({
     // Transports define destinations for logs.
     transports: [
         new winston.transports.Console({
-            format: winston.transports.combine(
+            format: winston.format.combine(
                 winston.format.colorize(),    //gives colorful log levels during development.
                 winston.format.simple()      //prints human-readable text instead of JSON.
             )

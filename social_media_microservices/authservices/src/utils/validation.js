@@ -8,7 +8,7 @@ const validateUserRegistration=(data)=>{
         password : Joi.string().min(6).required()
     })
 
-    return schema
+    return schema.validate(data);
 }
 
 export {validateUserRegistration};
