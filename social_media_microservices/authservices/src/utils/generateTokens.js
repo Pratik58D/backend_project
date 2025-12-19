@@ -9,22 +9,22 @@ const generateTokens = async (user) => {
         username: user.username
     },
         process.env.JWT_SECRET,
-        { expiresIn: '60m' })
+        { expiresIn: '60m' }
+    )
 
-        const refreshToken = crypto.randomBytes(40).toString("hex");
-        const expiresAt = new Date();
+    const refreshToken = crypto.randomBytes(40).toString("hex");
+    const expiresAt = new Date();
 
-        expiresAt.setDate(expiresAt.getDate() + 7)   //reffresh token expires in 7 days
+    expiresAt.setDate(expiresAt.getDate() + 7)   //reffresh token expires in 7 days
 
+    await RefreshToken.create({
+        token: refreshToken,
+        user: user._id,
+        expiresAt
 
-        await RefreshToken.create({
-            token : refreshToken,
-            user : user._id,
-            expiresAt
+    })
 
-        })
-
-        return {accessToken , RefreshToken}
+    return { accessToken, refreshToken }
 }
 
 

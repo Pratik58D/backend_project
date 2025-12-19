@@ -66,3 +66,206 @@
 {"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-16T11:13:37.613Z"}
 {"level":"info","message":"user registration endpoint..","service":"auth-service","timestamp":"2025-12-16T11:13:37.626Z"}
 {"buffer":{"data":[105,65,62,225,124,192,188,2,34,156,154,82],"type":"Buffer"},"level":"warn","message":"User saved successfully","service":"auth-service","timestamp":"2025-12-16T11:13:38.009Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-16T11:22:19.378Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-12-16T11:22:19.441Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-16T11:22:19.442Z"}
+{"level":"info","message":"user registration endpoint..","service":"auth-service","timestamp":"2025-12-16T11:22:19.578Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-00.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-16T11:22:20.343Z"}
+{"level":"warn","message":"User already exists","service":"auth-service","timestamp":"2025-12-16T11:22:20.807Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-12-16T11:22:30.012Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-16T11:22:30.012Z"}
+{"level":"info","message":"user registration endpoint..","service":"auth-service","timestamp":"2025-12-16T11:22:30.015Z"}
+{"0":"\"","1":"u","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"s","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"e","30":"e","31":"a","32":"s","33":"t","34":" ","35":"3","36":" ","37":"c","38":"h","39":"a","4":"r","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"n","50":"n","51":"g","6":"a","7":"m","8":"e","9":"\"","level":"warn","message":"validation error","service":"auth-service","timestamp":"2025-12-16T11:22:30.018Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-12-16T11:22:41.100Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-16T11:22:41.100Z"}
+{"level":"info","message":"user registration endpoint..","service":"auth-service","timestamp":"2025-12-16T11:22:41.103Z"}
+{"0":"\"","1":"u","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"s","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"e","30":"e","31":"a","32":"s","33":"t","34":" ","35":"3","36":" ","37":"c","38":"h","39":"a","4":"r","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"n","50":"n","51":"g","6":"a","7":"m","8":"e","9":"\"","level":"warn","message":"validation error","service":"auth-service","timestamp":"2025-12-16T11:22:41.105Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-12-16T11:23:14.386Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-16T11:23:14.387Z"}
+{"level":"info","message":"user registration endpoint..","service":"auth-service","timestamp":"2025-12-16T11:23:14.390Z"}
+{"0":"\"","1":"u","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"s","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"e","30":"e","31":"a","32":"s","33":"t","34":" ","35":"3","36":" ","37":"c","38":"h","39":"a","4":"r","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"n","50":"n","51":"g","6":"a","7":"m","8":"e","9":"\"","level":"warn","message":"validation error","service":"auth-service","timestamp":"2025-12-16T11:23:14.391Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-17T12:02:25.867Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-02.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-17T12:02:26.855Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-12-17T12:10:12.927Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-17T12:10:12.928Z"}
+{"level":"info","message":"user registration endpoint..","service":"auth-service","timestamp":"2025-12-17T12:10:12.942Z"}
+{"0":"\"","1":"u","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"s","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"e","30":"e","31":"a","32":"s","33":"t","34":" ","35":"3","36":" ","37":"c","38":"h","39":"a","4":"r","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"n","50":"n","51":"g","6":"a","7":"m","8":"e","9":"\"","level":"warn","message":"validation error","service":"auth-service","timestamp":"2025-12-17T12:10:12.952Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-12-17T12:10:30.401Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-17T12:10:30.402Z"}
+{"level":"info","message":"user registration endpoint..","service":"auth-service","timestamp":"2025-12-17T12:10:30.407Z"}
+{"level":"warn","message":"User already exists","service":"auth-service","timestamp":"2025-12-17T12:10:30.486Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-12-17T12:10:37.330Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-17T12:10:37.331Z"}
+{"level":"info","message":"user registration endpoint..","service":"auth-service","timestamp":"2025-12-17T12:10:37.335Z"}
+{"buffer":{"data":[105,66,157,189,42,202,88,4,65,82,109,22],"type":"Buffer"},"level":"warn","message":"User saved successfully","service":"auth-service","timestamp":"2025-12-17T12:10:37.710Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-12-17T12:12:43.927Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-17T12:12:43.928Z"}
+{"level":"info","message":"user registration endpoint..","service":"auth-service","timestamp":"2025-12-17T12:12:43.930Z"}
+{"level":"warn","message":"User already exists","service":"auth-service","timestamp":"2025-12-17T12:12:43.988Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-17T12:13:47.459Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-01.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-17T12:13:48.666Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T09:08:42.371Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-02.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T09:08:43.308Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"auth-service","timestamp":"2025-12-19T09:08:47.374Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T09:08:47.375Z"}
+{"level":"info","message":"Login endpoint hit...","service":"auth-service","timestamp":"2025-12-19T09:08:47.383Z"}
+{"level":"error","message":"Login error occured Cannot destructure property 'error' of 'validateLogin(...)' as it is undefined.","service":"auth-service","stack":"TypeError: Cannot destructure property 'error' of 'validateLogin(...)' as it is undefined.\n    at loginUser (file:///D:/Backend/projects%20backend%20only/social_media_microservices/authservices/src/controllers/auth.controller.js:58:17)\n    at Layer.handleRequest (D:\\Backend\\projects backend only\\social_media_microservices\\authservices\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Backend\\projects backend only\\social_media_microservices\\authservices\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (D:\\Backend\\projects backend only\\social_media_microservices\\authservices\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (D:\\Backend\\projects backend only\\social_media_microservices\\authservices\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (D:\\Backend\\projects backend only\\social_media_microservices\\authservices\\node_modules\\router\\lib\\layer.js:152:17)\n    at D:\\Backend\\projects backend only\\social_media_microservices\\authservices\\node_modules\\router\\index.js:295:15\n    at processParams (D:\\Backend\\projects backend only\\social_media_microservices\\authservices\\node_modules\\router\\index.js:582:12)\n    at next (D:\\Backend\\projects backend only\\social_media_microservices\\authservices\\node_modules\\router\\index.js:291:5)\n    at router.handle (D:\\Backend\\projects backend only\\social_media_microservices\\authservices\\node_modules\\router\\index.js:186:3)","timestamp":"2025-12-19T09:08:47.394Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"auth-service","timestamp":"2025-12-19T09:09:59.179Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T09:09:59.180Z"}
+{"level":"info","message":"Login endpoint hit...","service":"auth-service","timestamp":"2025-12-19T09:09:59.183Z"}
+{"level":"error","message":"Login error occured Cannot destructure property 'error' of 'validateLogin(...)' as it is undefined.","service":"auth-service","stack":"TypeError: Cannot destructure property 'error' of 'validateLogin(...)' as it is undefined.\n    at loginUser (file:///D:/Backend/projects%20backend%20only/social_media_microservices/authservices/src/controllers/auth.controller.js:58:17)\n    at Layer.handleRequest (D:\\Backend\\projects backend only\\social_media_microservices\\authservices\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (D:\\Backend\\projects backend only\\social_media_microservices\\authservices\\node_modules\\router\\lib\\route.js:157:13)\n    at Route.dispatch (D:\\Backend\\projects backend only\\social_media_microservices\\authservices\\node_modules\\router\\lib\\route.js:117:3)\n    at handle (D:\\Backend\\projects backend only\\social_media_microservices\\authservices\\node_modules\\router\\index.js:435:11)\n    at Layer.handleRequest (D:\\Backend\\projects backend only\\social_media_microservices\\authservices\\node_modules\\router\\lib\\layer.js:152:17)\n    at D:\\Backend\\projects backend only\\social_media_microservices\\authservices\\node_modules\\router\\index.js:295:15\n    at processParams (D:\\Backend\\projects backend only\\social_media_microservices\\authservices\\node_modules\\router\\index.js:582:12)\n    at next (D:\\Backend\\projects backend only\\social_media_microservices\\authservices\\node_modules\\router\\index.js:291:5)\n    at router.handle (D:\\Backend\\projects backend only\\social_media_microservices\\authservices\\node_modules\\router\\index.js:186:3)","timestamp":"2025-12-19T09:09:59.184Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T09:11:37.818Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-02.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T09:11:39.024Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"auth-service","timestamp":"2025-12-19T09:11:41.388Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T09:11:41.389Z"}
+{"level":"info","message":"Login endpoint hit...","service":"auth-service","timestamp":"2025-12-19T09:11:41.394Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T09:13:38.166Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-01.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T09:13:39.146Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"auth-service","timestamp":"2025-12-19T09:13:42.658Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T09:13:42.659Z"}
+{"level":"info","message":"Login endpoint hit...","service":"auth-service","timestamp":"2025-12-19T09:13:42.667Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T09:21:12.116Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-01.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T09:21:13.102Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T09:32:45.312Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-00.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T09:32:46.342Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T09:50:51.678Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-00.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T09:50:52.850Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T10:05:48.715Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-02.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T10:05:49.887Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T10:11:00.479Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-01.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T10:11:01.502Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T10:11:39.677Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-01.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T10:11:40.347Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T10:33:09.217Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-00.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T10:33:10.176Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"auth-service","timestamp":"2025-12-19T10:47:31.931Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T10:47:31.933Z"}
+{"level":"info","message":"Login endpoint hit...","service":"auth-service","timestamp":"2025-12-19T10:47:31.955Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"auth-service","timestamp":"2025-12-19T10:59:59.137Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T10:59:59.138Z"}
+{"level":"info","message":"Login endpoint hit...","service":"auth-service","timestamp":"2025-12-19T10:59:59.140Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T11:00:12.294Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-02.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T11:00:13.496Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"auth-service","timestamp":"2025-12-19T11:00:14.872Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:00:14.873Z"}
+{"level":"info","message":"Login endpoint hit...","service":"auth-service","timestamp":"2025-12-19T11:00:14.884Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T11:00:29.465Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-01.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T11:00:30.131Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T11:01:20.571Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-02.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T11:01:21.605Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"auth-service","timestamp":"2025-12-19T11:01:25.286Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:01:25.287Z"}
+{"level":"info","message":"Login endpoint hit...","service":"auth-service","timestamp":"2025-12-19T11:01:25.300Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh","service":"auth-service","timestamp":"2025-12-19T11:01:40.277Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:01:40.278Z"}
+{"level":"error","service":"auth-service","timestamp":"2025-12-19T11:01:40.284Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"auth-service","timestamp":"2025-12-19T11:01:59.268Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:01:59.269Z"}
+{"level":"info","message":"Login endpoint hit...","service":"auth-service","timestamp":"2025-12-19T11:01:59.273Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh","service":"auth-service","timestamp":"2025-12-19T11:02:28.657Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:02:28.658Z"}
+{"level":"error","service":"auth-service","timestamp":"2025-12-19T11:02:28.662Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh","service":"auth-service","timestamp":"2025-12-19T11:03:41.940Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:03:41.942Z"}
+{"level":"error","service":"auth-service","timestamp":"2025-12-19T11:03:41.945Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh","service":"auth-service","timestamp":"2025-12-19T11:04:03.161Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:04:03.162Z"}
+{"level":"error","service":"auth-service","timestamp":"2025-12-19T11:04:03.166Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh","service":"auth-service","timestamp":"2025-12-19T11:06:11.233Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:06:11.236Z"}
+{"level":"error","service":"auth-service","timestamp":"2025-12-19T11:06:11.238Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T11:06:33.326Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-00.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T11:06:34.558Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"auth-service","timestamp":"2025-12-19T11:06:47.456Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:06:47.458Z"}
+{"level":"info","message":"Login endpoint hit...","service":"auth-service","timestamp":"2025-12-19T11:06:47.468Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T11:08:13.080Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-01.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T11:08:14.129Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"auth-service","timestamp":"2025-12-19T11:08:23.106Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:08:23.107Z"}
+{"level":"info","message":"Login endpoint hit...","service":"auth-service","timestamp":"2025-12-19T11:08:23.116Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh","service":"auth-service","timestamp":"2025-12-19T11:08:31.478Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:08:31.484Z"}
+{"level":"error","service":"auth-service","timestamp":"2025-12-19T11:08:31.492Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T11:08:52.816Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-01.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T11:08:53.515Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh","service":"auth-service","timestamp":"2025-12-19T11:09:06.884Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:09:06.886Z"}
+{"level":"error","service":"auth-service","timestamp":"2025-12-19T11:09:06.895Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh","service":"auth-service","timestamp":"2025-12-19T11:09:44.806Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:09:44.808Z"}
+{"level":"error","service":"auth-service","timestamp":"2025-12-19T11:09:44.812Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T11:10:13.601Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-01.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T11:10:14.647Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh","service":"auth-service","timestamp":"2025-12-19T11:10:18.823Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:10:18.825Z"}
+{"level":"error","service":"auth-service","timestamp":"2025-12-19T11:10:18.836Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T11:11:25.289Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-01.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T11:11:26.331Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh","service":"auth-service","timestamp":"2025-12-19T11:11:28.075Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:11:28.077Z"}
+{"level":"error","service":"auth-service","timestamp":"2025-12-19T11:11:28.086Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T11:12:18.373Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-00.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T11:12:19.100Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh","service":"auth-service","timestamp":"2025-12-19T11:12:21.450Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:12:21.451Z"}
+{"level":"error","service":"auth-service","timestamp":"2025-12-19T11:12:21.461Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh","service":"auth-service","timestamp":"2025-12-19T11:13:44.588Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:13:44.589Z"}
+{"level":"error","service":"auth-service","timestamp":"2025-12-19T11:13:44.594Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh","service":"auth-service","timestamp":"2025-12-19T11:22:41.458Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:22:41.459Z"}
+{"level":"error","service":"auth-service","timestamp":"2025-12-19T11:22:41.461Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh","service":"auth-service","timestamp":"2025-12-19T11:23:18.598Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:23:18.599Z"}
+{"level":"error","service":"auth-service","timestamp":"2025-12-19T11:23:18.600Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh","service":"auth-service","timestamp":"2025-12-19T11:23:38.835Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:23:38.835Z"}
+{"level":"error","service":"auth-service","timestamp":"2025-12-19T11:23:38.838Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T11:24:11.335Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh","service":"auth-service","timestamp":"2025-12-19T11:24:11.824Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:24:11.825Z"}
+{"level":"error","service":"auth-service","timestamp":"2025-12-19T11:24:11.838Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-01.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T11:24:12.463Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh","service":"auth-service","timestamp":"2025-12-19T11:24:19.168Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:24:19.169Z"}
+{"level":"error","service":"auth-service","timestamp":"2025-12-19T11:24:19.172Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T11:24:41.973Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-01.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T11:24:42.637Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh","service":"auth-service","timestamp":"2025-12-19T11:24:44.521Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:24:44.521Z"}
+{"level":"error","service":"auth-service","timestamp":"2025-12-19T11:24:44.526Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T11:26:01.978Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-02.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T11:26:03.119Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T11:26:13.837Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-00.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T11:26:14.530Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh","service":"auth-service","timestamp":"2025-12-19T11:26:30.033Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:26:30.034Z"}
+{"level":"error","service":"auth-service","timestamp":"2025-12-19T11:26:30.038Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh","service":"auth-service","timestamp":"2025-12-19T11:27:08.424Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:27:08.425Z"}
+{"level":"error","service":"auth-service","timestamp":"2025-12-19T11:27:08.427Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T11:29:11.163Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-00.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T11:29:12.291Z"}
+{"level":"info","message":"Auth server is running on port 3001","service":"auth-service","timestamp":"2025-12-19T11:29:29.895Z"}
+{"level":"info","message":"database connected ac-etd0hrc-shard-00-02.ei9nj2n.mongodb.net","service":"auth-service","timestamp":"2025-12-19T11:29:30.592Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh","service":"auth-service","timestamp":"2025-12-19T11:29:36.708Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:29:36.708Z"}
+{"level":"error","service":"auth-service","timestamp":"2025-12-19T11:29:36.712Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh-token","service":"auth-service","timestamp":"2025-12-19T11:31:54.029Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:31:54.030Z"}
+{"level":"info","message":"Refresh token endpoint hit...","service":"auth-service","timestamp":"2025-12-19T11:31:54.034Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"auth-service","timestamp":"2025-12-19T11:35:46.994Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:35:46.995Z"}
+{"level":"info","message":"Login endpoint hit...","service":"auth-service","timestamp":"2025-12-19T11:35:46.998Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh-token","service":"auth-service","timestamp":"2025-12-19T11:35:57.534Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:35:57.534Z"}
+{"level":"info","message":"Refresh token endpoint hit...","service":"auth-service","timestamp":"2025-12-19T11:35:57.539Z"}
+{"level":"warn","message":"Invalid or expired refresh token","service":"auth-service","timestamp":"2025-12-19T11:35:57.598Z"}
+{"level":"info","message":"Received POST request to /api/auth/refresh-token","service":"auth-service","timestamp":"2025-12-19T11:36:21.905Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:36:21.905Z"}
+{"level":"info","message":"Refresh token endpoint hit...","service":"auth-service","timestamp":"2025-12-19T11:36:21.907Z"}
+{"level":"info","message":"Received POST request to /api/auth/logout","service":"auth-service","timestamp":"2025-12-19T11:39:09.422Z"}
+{"level":"info","message":"Request body , [object Object]","service":"auth-service","timestamp":"2025-12-19T11:39:09.423Z"}
+{"level":"info","message":"Logout endpoint hit...","service":"auth-service","timestamp":"2025-12-19T11:39:09.425Z"}
+{"level":"info","message":"Refresh token deleted for logout","service":"auth-service","timestamp":"2025-12-19T11:39:09.494Z"}
