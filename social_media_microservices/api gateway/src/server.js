@@ -8,12 +8,22 @@ import {RedisStore} from "rate-limit-redis";
 import errorHandler from "./middleware/errorhandler.js";
 import proxy from "express-http-proxy"
 import logger from "./utils/logger.js";
+import validatetoken from "./middleware/authMiddleware.js";
 
 dotenv.config();
 const app = express()
 const port = process.env.PORT
 const redisClient = new Redis(process.env.REDIS_URL)
 
+
+// Add this debugging
+console.log('=== ENVIRONMENT VARIABLES ===');
+console.log('PORT:', process.env.PORT);
+console.log('IDENTITY_SERVICE_URL:', process.env.IDENTITY_SERVICE_URL);
+console.log('POST_SERVICE_URL:', process.env.POST_SERVICE_URL);
+console.log('REDIS_URL:', process.env.REDIS_URL);
+console.log('JWT_SECRET:', process.env.JWT_SECRET ? 'Loaded' : 'NOT LOADED');
+console.log('============================');
 
 
 app.use(helmet());
@@ -45,7 +55,7 @@ app.use(ratelimitOptions);
 //logging middleware 
 app.use((req,res, next)=> {
     logger.info(`Received ${req.method} request to ${req.url}`);
-    logger.info(`Request body ,${req.body}`);
+    logger.info("Request body" ,req.body);
     next();
 })
 
@@ -64,7 +74,7 @@ const proxyOptions = {
 };
 
 
-//setting up proxy for our identity service
+//setting up proxy for our auth service
 app.use(
     "/v1/auth",
     proxy(process.env.IDENTITY_SERVICE_URL , {
@@ -83,6 +93,30 @@ app.use(
     })
 )
 
+//setting up proxy for our post service
+app.use(
+    "/v1/posts",
+    validatetoken, 
+    proxy(process.env.POST_SERVICE_URL,{
+        ...proxyOptions,
+        proxyReqOptDecorator:(proxyReqOpts,srcReq)=>{
+            proxyReqOpts.headers["Content-Type"] = "application/json";
+            proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
+            proxyReqOpts.headers["authorization"] = srcReq.headers.authorization;
+
+
+            return proxyReqOpts;
+        },
+        userResDecorator:(proxyRes, proxyResData , userReq , userRes)=>{
+            logger.info(
+                `Response received from Post service: ${proxyRes.statusCode}`
+            );
+            return proxyResData
+        }
+
+    })
+
+)
 
 app.use(errorHandler);
 
@@ -92,5 +126,6 @@ app.listen(port,()=>{
     logger.info(`API Gateway is running on port ${port}`);
     logger.info(`auth service is running on port ${process.env.IDENTITY_SERVICE_URL}`)
     logger.info(`Redis Url ${process.env.REDIS_URL}`)
+    logger.info(`posts service is running in port ${process.env.POST_SERVICE_URL}`)
 })
 
