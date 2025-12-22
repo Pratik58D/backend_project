@@ -28,7 +28,6 @@ console.log('============================');
 
 app.use(helmet());
 app.use(cors());
-app.use(express.json())
 
 
 
@@ -95,15 +94,13 @@ app.use(
 
 //setting up proxy for our post service
 app.use(
-    "/v1/posts",
-    validatetoken, 
+    "/v1/posts", 
+    validatetoken,
     proxy(process.env.POST_SERVICE_URL,{
         ...proxyOptions,
         proxyReqOptDecorator:(proxyReqOpts,srcReq)=>{
             proxyReqOpts.headers["Content-Type"] = "application/json";
             proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
-            proxyReqOpts.headers["authorization"] = srcReq.headers.authorization;
-
 
             return proxyReqOpts;
         },
@@ -118,9 +115,12 @@ app.use(
 
 )
 
+
+// Parse body only for non-proxy routes
+app.use(express.json());
+
+
 app.use(errorHandler);
-
-
 
 app.listen(port,()=>{
     logger.info(`API Gateway is running on port ${port}`);

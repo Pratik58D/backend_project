@@ -29,7 +29,7 @@ const validatetoken = (req, res, next) => {
         });
     }
     const token = authHeader && authHeader.split(" ")[1];
-    console.log({ token });
+    // console.log({ token });
 
     if (!token) {
         logger.warn("Access attempt without valid token!");
