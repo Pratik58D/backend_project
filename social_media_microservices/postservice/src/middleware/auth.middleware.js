@@ -1,7 +1,7 @@
 import logger from "../utils/logger.js";
 
 const authenticateRequest = (req,res,next)=>{
-    const userId = req.header["x-user-id"];
+    const userId = req.headers["x-user-id"];
     console.log({userId})
 
     if(!userId){

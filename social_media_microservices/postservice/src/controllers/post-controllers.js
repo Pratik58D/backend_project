@@ -24,9 +24,9 @@ const createPost = async (req, res) => {
 
         await newPost.save();
 
-        await publishEvent("post.created", {
+        // await publishEvent("post.created", {
 
-        })
+        // })
         logger.info("Post created successfully", newPost);
         return res.status(200).json({
             success: true,
@@ -50,6 +50,18 @@ const getAllPosts = async (req, res) => {
         const page = parseInt(req.query.page) || 1;
         const limit = parseInt(req.query.limit) || 10;
         const startIndex = (page - 1) * limit;
+
+        const cacheKey = `posts:${page}:${limit}`;
+        const cachedPosts = await req.redisClient.get(cacheKey);
+
+        if (cachedPosts) {
+            return res.json(JSON.parse(cachePosts))
+        }
+
+        const posts = await Post.find({})
+        .sort({created : -1})
+        .skip(startIndex)
+        .limit(limit)
 
 
 

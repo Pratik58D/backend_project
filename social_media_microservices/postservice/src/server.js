@@ -31,8 +31,15 @@ app.use((req, res, next) => {
 //*** implement Ip based rate limiting for sensitive endpoints
 
 
+
 //routes -- passing redisclient to routes
-app.use("/api/posts",postRoutes);
+app.use("/api/posts",
+  (req,res,next)=>{
+    req.redisClient = redisClient
+    next()
+  },
+  postRoutes
+);
 
 app.use(errorHandler);
 
