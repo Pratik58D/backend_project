@@ -8,9 +8,9 @@ const router = express.Router();
 router.use(authenticateRequest);
 
 router.post("/create-post",createPost);
-router.get("/all-post",getAllPosts);
+router.get("/all-posts",getAllPosts);
 router.get("/:id", getPost);
-router.get("/:id",deletePost);
+router.delete("/:id",deletePost);
 
 
 
