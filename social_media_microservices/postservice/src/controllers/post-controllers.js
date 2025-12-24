@@ -2,13 +2,13 @@ import Post from "../models/post.model.js";
 import logger from "../utils/logger.js"
 import validateCreatePost from "../utils/validation.js";
 
-async function invalidatePostCache(req,input) {
+async function invalidatePostCache(req, input) {
     const cachedKey = `post:${input}`;
     await req.redisClient.del(cachedKey);
 
     const keys = await req.redisClient.keys("posts:*");
-  
-    if(keys.length > 0){
+
+    if (keys.length > 0) {
         await req.redisClient.del(keys)
     }
 }
@@ -39,7 +39,7 @@ const createPost = async (req, res) => {
 
         // })
 
-        await invalidatePostCache(req,newPost._id.toString());
+        await invalidatePostCache(req, newPost._id.toString());
 
         logger.info("Post created successfully", newPost);
         return res.status(200).json({
@@ -146,6 +146,9 @@ const getPost = async (req, res) => {
 const deletePost = async (req, res) => {
     logger.info("Delete post endpoint reached");
     try {
+        console.log("req.params.id" , req.params.id);
+        console.log(req.user.userId , "abcde");
+        
         const post = await Post.findOneAndDelete({
             _id: req.params.id,
             user: req.user.userId
@@ -158,13 +161,16 @@ const deletePost = async (req, res) => {
             });
         }
 
+        await invalidatePostCache(req, req.params.id);
 
-
+        return res.status(200).json({
+            message: 'Post deleted successfully',
+        })
     } catch (error) {
-        logger.error("Error deleting post Controller", error);
+        logger.error("Error deleting post Controller", error.message);
         res.status(500).json({
             success: false,
-            message: "Error creating post",
+            message: "Error deleting post",
         });
 
     }
