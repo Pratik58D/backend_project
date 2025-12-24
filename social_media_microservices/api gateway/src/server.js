@@ -16,16 +16,6 @@ const port = process.env.PORT
 const redisClient = new Redis(process.env.REDIS_URL)
 
 
-// Add this debugging
-console.log('=== ENVIRONMENT VARIABLES ===');
-console.log('PORT:', process.env.PORT);
-console.log('IDENTITY_SERVICE_URL:', process.env.IDENTITY_SERVICE_URL);
-console.log('POST_SERVICE_URL:', process.env.POST_SERVICE_URL);
-console.log('REDIS_URL:', process.env.REDIS_URL);
-console.log('JWT_SECRET:', process.env.JWT_SECRET ? 'Loaded' : 'NOT LOADED');
-console.log('============================');
-
-
 app.use(helmet());
 app.use(cors());
 
