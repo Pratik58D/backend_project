@@ -1,5 +1,5 @@
 import cloudinary from "cloudinary"
-import logger from "./logger";
+import logger from "./logger.js";
 
 cloudinary.config({
     cloud_name : process.env.CLOUD_NAME,
@@ -9,10 +9,7 @@ cloudinary.config({
 
 const uploadMediaToCloudinary = (file) =>{
     return new Promise((resolve , reject)=>{
-        const uploadStrem = cloudinary.uploader.upload_stream(
-            {
-                resource_type : "auto"
-            },
+        const uploadStrem = cloudinary.uploader.upload_stream({ resource_type : "auto"},
             (error , result) => {
                 if(error){
                     logger.error("Error while uploading media to cloudinary", error);

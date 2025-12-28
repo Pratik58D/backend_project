@@ -2,15 +2,16 @@ import dotenv from "dotenv";
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
-import connectDb from "./config/dbconnection";
-import errorHandler from "./utils/error.middleware";
-import logger from "./utils/logger";
+import connectDb from "./config/dbconnection.js";
+import errorHandler from "./utils/error.middleware.js";
+import logger from "./utils/logger.js";
+import mediaRoutes from "./routes/media.routes.js"
 
 
 dotenv.config();
 
 const app = express();
-const post = process.env.PORT || 3003;
+const port = process.env.PORT || 3003;
 
 // connect to mongoDb
 connectDb();
@@ -29,12 +30,13 @@ app.use((req,res,next)=>{
 
 //Todo - implement Ip based rate limiting for sensitive endpoints
 
+app.use("/api/media",mediaRoutes);
+
 app.use(errorHandler)
 
 
 app.listen(port , ()=>{
-    logger.error("failed to connect to server", error)
-    process.exit(1)
+    logger.info(`Media_Service is runnig in port  ${port} `)
 })
 
 
