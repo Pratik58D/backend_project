@@ -6,7 +6,8 @@ import Media from "../models/media.model.js"
 const uploadMedia = async (req, res) => {
     logger.info("Starting media upload........");
     try {
-
+        // console.log("req.file" , req.file);
+        
         if (!req.file) {
             logger.error("file not Found. Please add a file and try again");
             return res.status(400).json({
@@ -15,10 +16,10 @@ const uploadMedia = async (req, res) => {
             });
         }
 
-        const { originalName, mimetype, buffer } = req.file;
+        const { originalname, mimetype, buffer } = req.file;
         const userId = req.user.userId;
 
-        logger.info(`file deatils: name = ${originalName} , type = ${mimetype}`);
+        logger.info(`file deatils: name = ${originalname} , type = ${mimetype}`);
         logger.info("uploading to cloudinary starting....")
 
         const cloudinaryResult = await uploadMediaToCloudinary(req.file);
@@ -28,7 +29,7 @@ const uploadMedia = async (req, res) => {
 
         const newMedia = new Media({
             publicId: cloudinaryResult.public_id,
-            originalName: originalName,
+            originalName: originalname,
             mimeType: mimetype,
             url: cloudinaryResult.secure_url,
             userId,

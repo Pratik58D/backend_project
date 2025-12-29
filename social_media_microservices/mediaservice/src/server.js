@@ -7,7 +7,6 @@ import errorHandler from "./utils/error.middleware.js";
 import logger from "./utils/logger.js";
 import mediaRoutes from "./routes/media.routes.js"
 
-
 dotenv.config();
 
 const app = express();
@@ -16,7 +15,6 @@ const port = process.env.PORT || 3003;
 // connect to mongoDb
 connectDb();
 
-
 app.use(cors());
 app.use(helmet());
 app.use(express.json());
@@ -24,13 +22,13 @@ app.use(express.json());
 
 app.use((req,res,next)=>{
     logger.info(`Received ${req.method} request to ${req.url}`);
-    logger.info(`Request body , ${req.body}`);
     next()
 });
 
 //Todo - implement Ip based rate limiting for sensitive endpoints
 
-app.use("/api/media",mediaRoutes);
+
+app.use("/api/media",mediaRoutes)
 
 app.use(errorHandler)
 
@@ -40,9 +38,7 @@ app.listen(port , ()=>{
 })
 
 
-
 // unhandled promise rejection
-
 process.on("unhandledRejection", (reason , promise)=>{
     logger.error("unhandled Rejection at", promise , "reason: " , reason)
 })
