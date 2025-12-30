@@ -38,7 +38,7 @@ const validatetoken = (req, res, next) => {
             success: false,
         });
     }
-    console.log("jwt secret" ,process.env.JWT_SECRET)
+
     jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
         if (err) {
             logger.warn("Invalid token!");

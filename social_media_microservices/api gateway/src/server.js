@@ -4,7 +4,7 @@ import helmet from "helmet";
 import Redis from "ioredis"
 import cors from "cors"
 import rateLimit from "express-rate-limit";
-import {RedisStore} from "rate-limit-redis";
+import { RedisStore } from "rate-limit-redis";
 import errorHandler from "./middleware/errorhandler.js";
 import proxy from "express-http-proxy"
 import logger from "./utils/logger.js";
@@ -23,17 +23,17 @@ app.use(cors());
 
 //rate limiting
 const ratelimitOptions = rateLimit({
-    windowMs : 15*60*1000,     //time window
-    max : 100,                 //Each IP can make 100 requests per 15 minutes
+    windowMs: 15 * 60 * 1000,     //time window
+    max: 100,                 //Each IP can make 100 requests per 15 minutes
     standardHeaders: true,     //dds RFC-standard rate-limit headers to the response.
-    legacyHeaders : false,     //This disables old headers
+    legacyHeaders: false,     //This disables old headers
     //This runs when the limit is exceeded.
-    handler : (req , res)=>{
+    handler: (req, res) => {
         logger.warn(`sensitive endpoints rate limit exceeded for IP : ${req.ip}`);
-        res.status(429).json({sucess : false , message : "Too many requests"})
+        res.status(429).json({ sucess: false, message: "Too many requests" })
     },
     //Instead of storing request counts in memory Counts are stored in Redis
-    store: new  RedisStore({
+    store: new RedisStore({
         sendCommand: (...args) => redisClient.call(...args)
     })
 })
@@ -42,22 +42,22 @@ const ratelimitOptions = rateLimit({
 app.use(ratelimitOptions);
 
 //logging middleware 
-app.use((req,res, next)=> {
+app.use((req, res, next) => {
     logger.info(`Received ${req.method} request to ${req.url}`);
-    logger.info("Request body" ,req.body);
+    logger.info("Request body", req.body);
     next();
 })
 
 
 const proxyOptions = {
-    proxyReqPathResolver : (req) =>{
+    proxyReqPathResolver: (req) => {
         return req.originalUrl.replace(/^\/v1/, "/api");
     },
-    proxyErrorHandler : (err, res, next)=>{
+    proxyErrorHandler: (err, res, next) => {
         logger.error(`Proxy error: ${err.message}`);
         res.status(500).json({
-            message : `Internal server error`,
-            error : err.message,
+            message: `Internal server error`,
+            error: err.message,
         });
     },
 };
@@ -66,13 +66,13 @@ const proxyOptions = {
 //setting up proxy for our auth service
 app.use(
     "/v1/auth",
-    proxy(process.env.IDENTITY_SERVICE_URL , {
+    proxy(process.env.IDENTITY_SERVICE_URL, {
         ...proxyOptions,
-        proxyReqOptDecorator: (proxyReqOpts , srcReq)=>{
+        proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
             proxyReqOpts.headers["Content-Type"] = "application/json";
             return proxyReqOpts;
         },
-        userResDecorator : (proxyRes , proxyResData , userReq , userRes)=>{
+        userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
             logger.info(
                 `Response recieved from post service : ${proxyRes.statusCode}`
             );
@@ -84,17 +84,17 @@ app.use(
 
 //setting up proxy for our post service
 app.use(
-    "/v1/posts", 
+    "/v1/posts",
     validatetoken,
-    proxy(process.env.POST_SERVICE_URL,{
+    proxy(process.env.POST_SERVICE_URL, {
         ...proxyOptions,
-        proxyReqOptDecorator:(proxyReqOpts,srcReq)=>{
+        proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
             proxyReqOpts.headers["Content-Type"] = "application/json";
             proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
 
             return proxyReqOpts;
         },
-        userResDecorator:(proxyRes, proxyResData , userReq , userRes)=>{
+        userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
             logger.info(
                 `Response received from Post service: ${proxyRes.statusCode}`
             );
@@ -106,16 +106,45 @@ app.use(
 )
 
 
+//setting up proxy for our Media service
+app.use(
+    '/v1/media',
+    validatetoken,
+    proxy(process.env.MEDIA_SERVICE_URL, {
+        ...proxyOptions,
+        proxyReqOptDecorator: (proxyReqOpts, srcReq) => {
+            proxyReqOpts.headers["x-user-id"] = srcReq.user.userId;
+
+             const contentType = srcReq.headers["content-type"];
+
+            if (!contentType || !contentType.startsWith("multipart/form-data")) {
+                proxyReqOpts.headers["Content-Type"] = "application/json";
+            }
+            return proxyReqOpts;
+        },
+        userResDecorator: (proxyRes, proxyResData, userReq, userRes) => {
+            logger.info(
+                `Response received from media service: ${proxyRes.statusCode}`
+            );
+            return proxyResData;
+
+        },
+        parseReqBody : false,
+    })
+)
+
+
 // Parse body only for non-proxy routes
 app.use(express.json());
 
 
 app.use(errorHandler);
 
-app.listen(port,()=>{
+app.listen(port, () => {
     logger.info(`API Gateway is running on port ${port}`);
     logger.info(`auth service is running on port ${process.env.IDENTITY_SERVICE_URL}`)
     logger.info(`Redis Url ${process.env.REDIS_URL}`)
-    logger.info(`posts service is running in port ${process.env.POST_SERVICE_URL}`)
+    logger.info(`Post service is running in port ${process.env.POST_SERVICE_URL}`)
+    logger.info(`Media service is running in port ${process.env.MEDIA_SERVICE_URL}`)
 })
 
