@@ -10,7 +10,7 @@ const logger = winston.createLogger({
     ),
    
     //This adds default metadata to every log line
-    defaultMeta: { service: "post-service" },
+    defaultMeta: { service: "media-service" },
     
     // Transports define destinations for logs.
     transports: [
