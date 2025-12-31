@@ -7,7 +7,7 @@ import errorHandler from "./utils/error.middleware.js";
 import logger from "./utils/logger.js";
 import mediaRoutes from "./routes/media.routes.js"
 import { connectionToRabbitMQ, consumeEvent } from "./utils/rabbitmq.js";
-import handlePostDeleted from "../../postservice/src/eventHandlers/eventHandlers.js";
+import handlePostDeleted from "./eventHandlers/eventHandlers.js";
 
 dotenv.config();
 
